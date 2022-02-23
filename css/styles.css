@@ -554,14 +554,6 @@ button {
   color: #ffffff;
 }
 
-.address-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.address-item {
-  display: inline-block;
-}
 
 .address-item:nth-child(1) .address-link {
   font-style: normal;
@@ -573,6 +565,7 @@ button {
 }
 
 .address-item:not(:first-child) .address-link {
+  max-width: 150px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
