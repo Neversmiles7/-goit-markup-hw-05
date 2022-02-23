@@ -102,6 +102,8 @@ button {
 }
 
 .navigation-link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -111,11 +113,27 @@ button {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: #212121;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  height: 4px;
+  width: 100%;
+
+  border-radius: 2px;
+  background-color: #2196f3;
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Контакты */
@@ -135,11 +153,14 @@ button {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: #757575;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts:hover,
 .header-contacts:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* header svg */
@@ -149,6 +170,8 @@ button {
   margin-right: 10px;
 
   fill: #757575;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts:hover .icon-smartphone,
@@ -156,6 +179,8 @@ button {
 .header-contacts:focus .icon-smartphone,
 .header-contacts:focus .icon-mail {
   fill: #2196f3;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Герой */
